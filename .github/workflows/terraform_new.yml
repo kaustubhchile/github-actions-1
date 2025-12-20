@@ -36,7 +36,7 @@ jobs:
         run: terraform init # Now GCP auth is active
 
       - name: Terraform Format
-        run: terraform fmt -check
+        run: terraform fmt -check -diff
 
       - name: Terraform Plan
         run: terraform plan -input=false
